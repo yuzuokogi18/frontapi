@@ -1,0 +1,26 @@
+
+<app-header></app-header>
+
+<div class="container">
+    <h2>Editar Libro</h2>
+    
+    <label for="books">LIBROS:</label>
+    <select id="books" (change)="onSelectBook($event)">
+      <option value="" disabled selected>Seleccione un libro</option>
+      <option *ngFor="let book of books" [value]="book.ID">{{ book.Title }}</option>
+    </select>
+  
+    <div *ngIf="selectedBook as book">
+      <label for="title">TÍTULO:</label>
+      <input id="title" [(ngModel)]="book.Title" type="text" />
+  
+      <label for="author">AUTOR:</label>
+      <input id="author" [(ngModel)]="book.Author" type="text" />
+  
+      <label for="price">PRECIO:</label>
+      <input id="price" [(ngModel)]="book.Price" type="number" />
+  
+      <button (click)="onUpdateBook()">EDITAR</button>
+    </div>
+  </div>
+  

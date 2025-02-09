@@ -1,0 +1,23 @@
+<div class="container">
+    <img src="assets/logo.png" alt="DinoBooks Logo" class="logo" />
+    <form (ngSubmit)="onSubmit()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" required />
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" required />
+  
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" [(ngModel)]="phone" name="phone" required />
+  
+      <label for="password">Password:</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required />
+  
+      <label for="confirmPassword">Confirmar Password:</label>
+      <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required />
+  
+      <button type="submit" class="register-btn">REGISTRARSE</button>
+    </form>
+    <button class="login-btn" (click)="goToLogin()">Volver al Login</button>
+  </div>
+  

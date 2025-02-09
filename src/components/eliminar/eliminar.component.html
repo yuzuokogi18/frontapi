@@ -1,0 +1,12 @@
+
+<app-header></app-header>
+<div class="container">
+  <h2>Eliminar Libro</h2>
+  <label for="books">LIBROS:</label>
+  <select id="books" [(ngModel)]="selectedBookId">
+    <option *ngFor="let book of books" [value]="book.ID">
+      {{ book.Title }} - {{ book.Author }} ({{ book.Price | currency }})
+    </option>
+  </select>
+  <button (click)="deleteBook()" [disabled]="!selectedBookId">ELIMINAR</button>
+</div>

@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div class="contenedor-libros">
+    <div class="tarjeta-libro" *ngFor="let libro of libros">
+      <h3>{{ libro.Title }}</h3>
+      <p>Autor: {{ libro.Author }}</p>
+      <p>Precio: ${{ libro.Price }}</p>
+      <button (click)="comprarLibro(libro)">Comprar</button>
+    </div>
+  </div>
+  
