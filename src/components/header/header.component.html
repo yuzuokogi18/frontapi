@@ -1,12 +1,21 @@
 <div class="container">
     <header>
-      <div class="logo">
+      <div class="logo" routerLink="/principal">
         <img src="assets/logo.png" alt="Logo Dinobooks" />
         <h1>Dinobooks</h1>
       </div>
       <a class="nav" routerLink="/verlibros">
         <span>VER LIBROS</span>
       </a>      
-      <div class="profile-icon">
-        <img src="assets/users.png" alt="Usuario" />
+      <div class="user-menu-container">
+        <div class="profile-icon" (click)="toggleMenu()">
+          <img src="assets/users.png" alt="Usuario" />
+        </div>
+      
+        <div class="menu" *ngIf="menuVisible">
+          <p [routerLink]="['/profile/:email']">Mi Perfil</p>
+          <p>Editar Perfil</p>
+          <p>Eliminar Perfil</p>
+        </div>
       </div>
+      

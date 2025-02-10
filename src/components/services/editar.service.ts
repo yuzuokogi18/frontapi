@@ -8,7 +8,7 @@ import { Books } from '../models/books';
   providedIn: 'root'
 })
 export class EditarService {
-  private apiUrl = 'http://localhost:8080/books'; // Ajusta la URL según tu backend
+  private apiUrl = 'http://localhost:8080/books';
 
   constructor(private http: HttpClient) {}
 

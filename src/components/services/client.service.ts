@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Client } from '../models/client';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RegistroService {
+export class ClientService {
   private apiUrl = 'http://localhost:8080/clients';  
 
   constructor(private http: HttpClient) {}
 
-  registrarCliente(name: string, email: string, phone: string, password: string): Observable<any> {
-    const cliente = { name, email, phone, password, confirmPassword: password }; 
-    return this.http.post(this.apiUrl, cliente);
+  getClientByEmail(email: string): Observable<Client> {
+    const url = `${this.apiUrl}/${email}`;  
+    return this.http.get<Client>(url);  
   }
 }

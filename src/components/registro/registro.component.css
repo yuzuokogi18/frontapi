@@ -35,12 +35,16 @@
   }
   
   input {
-    width: calc(100% - 16px); 
+    width: calc(100% - 16px); /* Se ajusta para no pegarse a los bordes */
+    padding: 12px; /* Aumenta el espacio interno */
+    font-size: 18px; /* Hace el texto más grande */
     border: 2px solid #4a90e2;
-    border-radius: 4px;
-    margin: 0 auto; 
+    border-radius: 6px;
+    margin: 0 auto;
     display: block;
-  }
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
   
   .register-btn {
     background-color: #4a90e2;

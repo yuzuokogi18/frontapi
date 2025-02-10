@@ -7,6 +7,9 @@ import { AgregarComponent } from '../components/agregar/agregar.component';
 import { EditarLibroComponent } from '../components/editar/editar.component';
 import { EliminarComponent } from '../components/eliminar/eliminar.component';
 import { VerlibrosComponent } from '../components/verlibros/verlibros.component';
+import { UsuariosComponent } from '../components/usuarios/usuarios.component';
+import { ProfileComponent } from '../components/profile/profile.component';
+
 export const routes: Routes =  [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
@@ -15,4 +18,6 @@ export const routes: Routes =  [
      {path: 'agregar',component: AgregarComponent},
      {path: 'editar',component:EditarLibroComponent},
       {path: 'eliminar',component:EliminarComponent},
-      {path: 'verlibros',component:VerlibrosComponent}];
+      {path: 'verlibros',component:VerlibrosComponent},
+    {path:'usuarios',component:UsuariosComponent},
+     {path:'profile/:email',component:ProfileComponent}];
